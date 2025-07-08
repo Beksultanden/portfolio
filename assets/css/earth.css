@@ -1,0 +1,27 @@
+#earth-section {
+  background: transparent;  /* убрал бордовый фон, при необходимости могу вернуть и посмотреть тут */
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#earthCanvas {
+  display: block;
+  width: 100%;                /* тянется по ширине родителя */
+  max-width: 1600px;           /* ограничение */
+  height: 640px;
+  margin: 0 auto;
+  background: linear-gradient(to top, #ffffff, #87cefa);
+  border-radius: 20px;
+ 
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid #89e4b5;
+}
+
+#earth-section {
+  background: transparent;
+  padding-top: 40px;
+  padding-bottom: 30px;   /* расстояние внизу */
+  margin-bottom: 30px;    /* дополнительное внешнее расстояние от следующего блока */
+}

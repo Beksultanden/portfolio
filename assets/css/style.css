@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --body: #545d6d;
+    --dark: #202631;
+    --border-color: rgba(0, 0, 0, 0.10);
+    --border-width: 1px;
+    --border-radius: 30px;
+}
+
+/* reset & helpers */
+body {
+    font-family: "Barlow", sans-serif;
+    line-height: 1.8;
+    color: var(--dark);
+}
+
+ h2,h3,h4,h5,h6 {
+    font-weight: 10;
+    color: var(--dark);
+} 
+
+a {
+    color: var(--body);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-weight: 700;
+}
+
+a:hover {
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+/* navbar */
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 16px;
+    z-index: 9999;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    text-transform: uppercase;
+    
+}
+.navbar-brand span {
+    color: #4e350fbb;
+}
+
+.navbar .navbar-nav .nav-link {
+    text-transform: uppercase;
+    font-size: 17px;
+    position: relative; 
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+  background-color: rgba(95, 156, 69, 0.971); /* чуть красноватый фон */
+  border-color: red;
+}
+
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background-color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 18px;
+    margin-left: 5px;
+    
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        background-color: var(--dark);
+    }
+}
+
+/* hero */
+#hero {
+    background: url("../img/cover133.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero {
+  padding: 230px 0;
+}
+
+#hero h1,
+#hero p {
+    color: var(--dark);
+}
+
+#hero h1 {
+    font-weight: 1000;
+}
+/*
+#hero h1 span {
+color: #d70f2d;
+}
+*/
+
+#hero p {
+    font-size: 23px;
+    max-width: 450px;
+}
+
+
+/* btn */
+.btn {
+    nav-down: 50px;
+    padding: 24px 54px;
+    border-width: 2px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* intro */
+.intro {
+    margin-bottom: 60px;
+}
+
+.intro .hr-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--dark);
+    display: inline-block;
+}
+
+.intro h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.intro p {
+    max-width: 500px;
+}
+
+.intro.intro-dark h1,
+.intro.intro-dark p {
+    color: white;
+}
+
+.intro.intro-dark .hr-line {
+    background-color: white;
+}
+
+/* Service */
+.service {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    padding: 32px;
+}
+
+.service .icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--dark);
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: white;
+    border-radius: var(--border-radius);
+    margin-right: 16px;
+}
+
+.link-arrow {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.link-arrow i {
+    transition: all 0.4s ease;
+}
+
+.link-arrow:hover i {
+    transform: translate(5px, -5px);
+}
+
+.link-arrow.link-dark {
+    color: var(--body);
+}
+.link-arrow.link-dark:hover {
+    color: white;
+}
+
+/* wrok */
+#work {
+    background-color: var(--dark);
+}
+
+.project h3 {
+    color: white;
+    margin-top: 24px;
+}
+
+.project .image-wrapper {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.project .image-wrapper img {
+    border-radius: var(--border-radius);
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+
+.project:hover .image-wrapper img {
+    transform: scale(1);
+}
+
+/* about */
+
+#about img {
+    border-radius: var(--border-radius);
+}
+
+/* reviews */
+#testimonials {
+    background-color: #f8f8f8;;
+}
+
+.review {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    background-color: white;
+}
+
+.review .person {
+    display: flex;
+    align-items: center;
+}
+
+.review .person img {
+    width: unset;
+    border-radius: var(--border-radius);
+    margin-right: 16px;
+}
+
+.review .stars {
+    color: orange;
+}
+
+.review p {
+    border-bottom: var(--border-width) solid var(--border-color);
+    padding-bottom: 16px;
+}
+
+/* contact */
+#contact form {
+    padding: 32px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+#contact form .form-control {
+    background-color: #f8f8f8;
+    border: transparent;
+    border-radius: var(--border-radius);
+    padding-left: 18px;
+}
+
+#contact form input.form-control {
+    height: 56px;
+}
+
+/* insta posts */
+#insta-posts {
+    position: relative;
+}
+
+.insta-follow {
+    width: 90px;
+    height: 90px;
+    background-color: var(--dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.insta-follow:hover {
+    background-color: white;
+}
+
+#insta-posts:hover .insta-follow {
+    opacity: 1;
+    top: 50%;
+}
+
+/* footer */
+.footer-top {
+    padding-bottom: 30px;
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer .social-links a {
+    border: var(--border-width) solid var(--border-color);
+}
+
+
+/* #это воторой этап который в разных цветах но без цветении*/
+
+/*
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  background: linear-gradient(45deg, #00f0ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s ease-in-out infinite alternate;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+*/
+
+.portfolio-box {
+  padding: 3px 9px;
+  border: 2px solid transparent;
+  border-radius: 45px;
+  background: linear-gradient(45deg, #aa2727, #299595, #932993, #8c8c2c);
+  background-size: 400% 400%;
+  animation: borderGlow 8s ease infinite;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+/* Сияющая анимация фона рамки */
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.navbar-brand span {
+  color: rgb(48, 5, 36);
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: default;
+  transform-origin: center;
+
+  
+}
+
+/* При наведении — индивидуальный цвет для каждой буквы */
+.navbar-brand .p:hover   { color: red;     transform: scale(1.3); }
+.navbar-brand .o1:hover  { color: rgb(255, 215, 0);    transform: scale(1.3); }
+.navbar-brand .r:hover   { color: green;   transform: scale(1.3); }
+.navbar-brand .t:hover   { color: blue;    transform: scale(1.3); }
+.navbar-brand .f:hover   { color: orange;  transform: scale(1.3); }
+.navbar-brand .o2:hover  { color: violet;  transform: scale(1.3); }
+.navbar-brand .l:hover   { color: cyan;    transform: scale(1.3); }
+.navbar-brand .i:hover   { color: deeppink;transform: scale(1.3); }
+.navbar-brand .o3:hover  { color: rgb(7, 236, 7);   transform: scale(1.3); }
+
+
+ .navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.navbar-brand span {
+  color: black;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: default;
+}
+
+/* Анимация при наведении (цвет + прыжок + вращение) */
+/*.navbar-brand .p:hover {
+  color: red;
+  animation: bounceRotate 1.6s ease;
+}
+.navbar-brand .o1:hover {
+  color: gold;
+  animation: bounceRotate 0.6s ease;
+}
+.navbar-brand .r:hover {
+  color: rgb(8, 242, 8);
+  animation: bounceRotate 0.6s ease;
+}
+.navbar-brand .t:hover {
+  color: blue;
+  animation: bounceRotate 0.6s ease;
+}
+.navbar-brand .f:hover {
+  color: orange;
+  animation: bounceRotate 0.6s ease;
+}
+.navbar-brand .o2:hover {
+  color: rgb(250, 7, 250);
+  animation: bounceRotate 0.6s ease;
+}
+.navbar-brand .l:hover {
+  color: cyan;
+  animation: bounceRotate 0.6s ease;
+}
+.navbar-brand .i:hover {
+  color: deeppink;
+  animation: bounceRotate 0.6s ease;
+}
+.navbar-brand .o3:hover {
+  color: rgb(5, 243, 17);
+  animation: bounceRotate 0.6s ease;
+}
+
+@keyframes bounceRotate {
+  0%   { transform: translateY(0) rotate(0deg); }
+  30%  { transform: translateY(-8px) rotate(-10deg); }
+  60%  { transform: translateY(4px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+*/
+
+
+/*
+.name span {
+  color: rgb(242, 5, 5);
+  display: inline-block;
+  transition: all 0.3s ease;
+  gap: 1px;
+  cursor: default;
+}
+
+ Анимация при наведении 
+.name .b:hover { color: red;       animation: bounceRotate 0.6s ease; }
+.name .e:hover { color: orange;    animation: bounceRotate 0.6s ease; }
+.name .k:hover { color: gold;      animation: bounceRotate 0.6s ease; }
+.name .s:hover { color: green;     animation: bounceRotate 0.6s ease; }
+.name .u:hover { color: cyan;      animation: bounceRotate 0.6s ease; }
+.name .l:hover { color: blue;      animation: bounceRotate 0.6s ease; }
+.name .t:hover { color: indigo;    animation: bounceRotate 0.6s ease; }
+.name .a:hover { color: deeppink;  animation: bounceRotate 0.6s ease; }
+.name .n:hover { color: brown;     animation: bounceRotate 0.6s ease; }
+
+
+@keyframes bounceRotate {
+  0%   { transform: translateY(0) rotate(0deg); }
+  30%  { transform: translateY(-8px) rotate(-10deg); }
+  60%  { transform: translateY(4px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+*/
+
+
+
+/*
+.name span {
+  display: inline-block;
+  animation: colorCycle 3s infinite;
+}
+
+ Смещение анимации, чтобы буквы мигали в разное время 
+.name .b { animation-delay: 0s;          }
+.name .e { animation-delay: 0.2s;      }
+.name .k { animation-delay: 0.4s;      }
+.name .s { animation-delay: 0.6s;         }
+.name .u { animation-delay: 0.8s;        }
+.name .l { animation-delay: 1s;          }
+.name .t { animation-delay: 1.2s;         }
+.name .a { animation-delay: 1.4s;          }
+.name .n { animation-delay: 1.6s;          }
+
+
+@keyframes colorCycle {
+  0%   { color: red; }
+  20%  { color: orange; }
+  40%  { color: yellow; }
+  60%  { color: rgb(17, 244, 17); }
+  80%  { color: blue; }
+  100% { color: rgb(243, 5, 243); }
+
+
+}
+*/
+/*
+.name span {
+  display: inline-block;
+  animation: colorBounce 3s infinite ease-in-out;
+}
+
+ Индивидуальная задержка — чтобы буквы прыгали и светились не одновременно 
+.name .b { animation-delay: 0s; }
+.name .e { animation-delay: 0.2s; }
+.name .k { animation-delay: 0.4s; }
+.name .s { animation-delay: 0.6s; }
+.name .u { animation-delay: 0.8s; }
+.name .l { animation-delay: 1s; }
+.name .t { animation-delay: 1.2s; }
+.name .a { animation-delay: 1.4s; }
+.name .n { animation-delay: 1.6s; }
+
+Анимация: цвет + подпрыгивание автоматически
+@keyframes colorBounce {
+  0% {
+    color: red;
+    transform: translateY(0);
+  }
+  20% {
+    color: orange;
+    transform: translateY(-6px);
+  }
+  40% {
+    color: yellow;
+    transform: translateY(0);
+  }
+  60% {
+    color: green;
+    transform: translateY(-6px);
+  }
+  80% {
+    color: blue;
+    transform: translateY(0);
+  }
+  100% {
+    color: violet;
+    transform: translateY(-6px);
+  }
+}
+*/
+
+.name span {
+  display: inline-block;
+  animation: colorCycle 3s infinite ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+/* Цвет — анимация для всех букв */
+@keyframes colorCycle {
+  0%   { color: red; }
+  10%   { color: rgb(0, 255, 179); }
+  20%  { color: orange; }
+  30%   { color: rgb(9, 248, 17); }
+  40%  { color: yellow; }
+  50%   { color: rgb(7, 7, 7); }
+  60%  { color: green; }
+  70%  { color: rgba(135, 124, 74, 0.458); }
+  80%  { color: blue; }
+  90%  { color: rgb(0, 128, 126); }
+  100% { color: violet; }
+}
+
+/* Задержки анимации цвета  чтобы мигали по очереди */
+.name .b { animation-delay: 0s; }
+.name .e { animation-delay: 0.2s; }
+.name .k { animation-delay: 0.4s; } 
+.name .s { animation-delay: 0.6s; }
+.name .u { animation-delay: 0.8s; }
+.name .l { animation-delay: 1s; }
+.name .t { animation-delay: 1.2s; }
+.name .a { animation-delay: 1.4s; }
+.name .n { animation-delay: 1.6s; }
+
+/* Подпрыгивание только при наведении */
+.name span:hover {
+  transform: translateY(-14px);
+}
+
+.country {
+  color: #cc0000;               /*cc0000  #ff0000 или #cc0000 для более мягкого тона */
+  font-size: 3rem;          /* сделал меньше, чем у заголовка */
+  font-weight: 830;         /* обычный вес не жирный */
+  text-decoration: none;    /* минус подчёркивание */
+  margin-left: 10px;
+}
+
+
+.social-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* Цвета при наведении */
+.social-links a[href*="github"]:hover {
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.social-links a[href*="linkedin"]:hover {
+  color: white;
+  background-color: #0e76a8;
+}
+
+.social-links a[href*="mailto"]:hover {
+  color: white;
+  background-color: #34A853; /* Google Red */
+}
+
+
+/*  ограничиваем абзац  к 6 строкам можете менять значение max-height  */
+.service p {
+    max-height: 15.6em;          /* ≈ 6 строк при line-height:1.6   */
+    overflow: hidden;
+    transition: max-height .35s ease;
+    position: relative;
+}
+
+/* при раскрытии убираем ограничение */
+.service p.expanded {
+    max-height: 1000em;    /* фактически без лимита   */
+}
+
+/* затемнение низа, чтобы было видно что текст обрезан */
+.service p::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 2.5em;              
+    background: linear-gradient(to bottom, transparent, #fff); /* под фон карточки */
+    pointer-events: none;
+}
+
+.service p.expanded::after { display: none; }
+
+
+/* Блок Обо мне показал 8-10 строк */
+.about-text {
+    max-height: 24em;        /* число под дизайн */
+    overflow: hidden;
+    position: relative;
+    transition: max-height .35s ease;
+}
+
+.about-text.expanded { max-height: 1000em; }   /* без лимита */
+
+/* полупрозрачная тень внизу чтобы было видно что текст обрезан */
+.about-text::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 2.5em;
+    background: linear-gradient(to bottom,
+                rgba(255,255,255,0),       /* прозрачный  */
+                var(--bs-body-bg, #fff));  /* → цвет фона карточки  */
+    pointer-events: none;
+}
+
+.about-text.expanded::after { display: none; }
+
+#insta-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* расстояние между фото */
+  padding: 20px;
+}
+
+
+
+#insta-posts .col {
+  width: 250px;   /* фиксированная ширина */
+  height: 250px;  /* фиксированная высота */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#insta-posts .col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Glavnoe обрезка по центру без искажения */
+  display: block;
+}
+#insta-posts {
+  margin-bottom: 30px;  
+}
+
+#about img {
+  width: 100%;               /* адаптивно по ширине */
+  max-height: 750px;         /* ограничение по высоте */
+  object-fit: cover;         /* обрезка если нужно */
+  border-radius: 15px;
+  margin-top: 30px; /* это отступ сверху */
+}
+
+footer h2 {
+  font-size: 20px;        /* уменьшит размер часть contact */
+  margin-top: 10px;       /* создаёт отступ сверху от EMAIL */
+}
+
+footer p {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-bottom {
+  margin-top: 0px;  /* уменьши если нужно */
+  padding-top: 0;
+}
+
+.footer-bottom p {
+  font-size: 18px; 
+}
+
+.footer-bottom a {
+  font-size: 18px; /* чтобы Beku тоже увеличился */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #insta-posts .col {
+    flex: 1 0 50%;
+  }
+  #about .col-lg-5, #about .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  h1.display-4 {
+    font-size: 1.8rem;
+  }
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .social-links a {
+    margin: 0 5px;
+    font-size: 1.2rem;
+  }
+  .plane-section, #earth-section {
+    padding: 15px 0;
+  }
+}
+
+/* адаптация под мобильные устройства */
+
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;         
+    width: 100%;
+  }
+
+  .service .icon {
+    margin: 0 auto 16px auto; /* центрируем иконку */
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    background-size: 125%;
+    background-position: top  100px center;
+    background-repeat: no-repeat;
+    padding: 110px  0 90px 0; /* уменьшение отступов */
+    min-height: auto; /*  отключил фиксированную высоту */
+  }
+
+  #hero .container {
+    /* background-color: rgba(255, 255, 255, 0.7);  фон под текстом */
+    border-radius: 12px;
+    /*padding: 20px;*/
+  }
+
+  #hero h1 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-align: center;
+     /* margin-top: 30px;   добавили отступ сверху */
+  }
+
+  #hero .name span {
+    font-size: 1.3rem;
+    margin-right: 2px;
+  }
+
+  .country {
+    font-size: 1.4rem;
+    color: red;
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  #hero p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    color: red !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-box {
+    font-size: 1.2rem;
+    transform: scale(0.9); /*  уменьшить ещё при необходимости */
+  }
+
+  .portfolio-box span {
+    letter-spacing: 1px; /* чуть плотнее */
+  }
+}
+
+
+
+
+
+
+
+
+

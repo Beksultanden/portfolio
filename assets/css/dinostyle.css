@@ -1,0 +1,52 @@
+
+.dino-footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#dinoCanvas { 
+  background: #f2f2f2;
+  border: 2px solid #999;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  margin: 0 auto;
+  transform: translate(175px, -155px); /* вправо и вверх */
+}
+
+
+
+.dino-hint {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+.dino-footer {
+  text-align: right;
+}
+
+#dinoCanvas {
+  width: 100%; max-width: 800px;
+  border: 2px solid #999;
+}
+
+
+@media (max-width: 767px) {
+  #dinoCanvas {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none; /* убрать смещение */
+  }
+
+  .footer-top .col-md-6 {
+    width: 100%;
+    text-align: center;
+  }
+}
