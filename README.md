@@ -2,7 +2,7 @@
 
 [🔗 Visit the site](https://beksultan-kochkombaev.netlify.app/)
 
-This portfolio is designed to briefly present my work, skills, and contact information in the form of a modern, interactive website. Simply put, the site serves as an expanded online résumé in a more convenient and modern format.
+This portfolio is designed to briefly present my work, skills, and contact information in the form of a modern, interactive website. Simply put, the site serves as an expanded online resume in a more convenient and modern format.
 
 ---
 
