@@ -4,7 +4,7 @@
    --------------------------------------------------------- */
 
 
-   import * as THREE from 'three';
+import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const canvas = document.getElementById('orcaCanvas');
@@ -25,7 +25,6 @@ const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(5, 10, 7);
 scene.add(light);
 
-
 let whale = null;
 const loader = new GLTFLoader();
 loader.load('./assets/modelsss1212/scene.gltf', (gltf) => {
@@ -36,15 +35,12 @@ loader.load('./assets/modelsss1212/scene.gltf', (gltf) => {
   console.log('Косатка загружена ');
 });
 
-
 const mouse = new THREE.Vector2(0,0);
 window.addEventListener('mousemove', e=>{
   const r = canvas.getBoundingClientRect();
   mouse.x = ((e.clientX-r.left)/r.width )*2-1;
   mouse.y = -((e.clientY-r.top )/r.height)*2+1;
 });
-
-
 
 const width = canvas.clientWidth;
 const height = canvas.clientHeight;
